@@ -4,4 +4,5 @@ node_modules
 
 
 # tailwind css
-style.css
+static/tailwindcss/
+static/tailwindcss/styles.css
