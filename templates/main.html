@@ -1,25 +1,49 @@
 <!DOCTYPE html>
+
+{% load static %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>University Research Information System</title>
+
+    <!-- Can be removed -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- LEGIT 100% -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
     
 </head>
 <body>
 
-    <nav class="bg-gray-800 py-4">
-        <div class="container mx-auto flex justify-between items-center">
-          <a href="#" class="text-white text-xl font-bold">My Website</a>
-          <ul class="flex space-x-4">
+
+<nav class="bg-gray-800 p-8">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-white text-2xl font-semibold">University Research Information Management</a>
+        <div class="flex space-x-4 md:hidden">
+            <!-- Hamburger menu icon for mobile -->
+            <button id="mobile-menu-button"
+                    class="text-white inline-flex p-2 rounded-md hover:bg-gray-700 focus:outline-none focus:ring">
+                <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <ul id="mobile-menu" class="hidden md:flex md:space-x-4 md:p-0">
             <li><a href="#" class="text-white">Home</a></li>
             <li><a href="#" class="text-white">About</a></li>
             <li><a href="#" class="text-white">Services</a></li>
             <li><a href="#" class="text-white">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
+        </ul>
+    </div>
+</nav>
+
+
+
+
       
     {% include 'navbar.html' %}
 
@@ -28,4 +52,12 @@
     
     {% endblock %}
 </body>
+
+
+
 </html>
+
+<!-- JavaScript to toggle mobile menu -->
+<script src="{% static 'js/index.js' %}"></script>
+
+
